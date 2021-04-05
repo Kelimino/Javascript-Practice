@@ -1,15 +1,18 @@
-body{
-
-    background:green;
-    text-align: center;
+body {
+  background: green;
+  text-align: center;
 }
 
-h1{
-
-    color: blueviolet;
+h1 {
+  color: blueviolet;
 }
 
-p{
+p {
+  background: white;
+}
 
-    background: white;
+.change {
+  color: blue;
+  background: white;
+  border: solid 1px red;
 }

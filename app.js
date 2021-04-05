@@ -107,6 +107,112 @@ if (dice1 === 6 || dice2 === 3) {
 }
 
 //Array
-const day = ["sleep", "eat", "work", "sport"];
+const day = ["sleep", "eat", "work", "sport","film"];
 
-console.log(day);
+//Add item in array
+day.push("drive");
+//Remove last item in array
+day.pop();
+//Remove first item in array
+day.shift();
+
+//add new first item in array
+day.unshift("sex");
+console.log(day)
+console.log(day.indexOf("eat") + ' position of eat');
+console.log(day[2] + ' is 2');
+
+const film = day.indexOf('film')
+console.log(film)
+
+//Object
+const user = {
+    name: "kelligart",
+    age: 24,
+    job: "Designer",
+    skill: ["design", "code", "art"],
+    //write a function inside an object
+    resume: function () {
+        //parse property 'name' of object
+        console.log(this.name)
+    }
+}
+console.log(user.skill);
+
+//all property object of window
+console.log(this);
+
+//fire a function inside an object
+user.resume()
+
+//fucntion to resolve the property age of object user
+function sayAge() {
+    console.log(user.age)
+}
+sayAge()
+
+//tableau of names
+const names = ["leo", "paul", "max", "joe"];
+
+// loop 'of' return property
+for (prenom of names) {
+    console.log(`Hello there ${prenom}`);
+    if (prenom === "paul") {
+        console.log(`Paul is in my list`);
+        break;
+        
+    }
+    
+}
+// loop 'in' return index
+for (prenom in names) {
+    console.log(prenom);
+}
+
+//loop while is true
+
+let loading = 0;
+
+while (loading < 100) {
+    console.log(`this site is still loading`);
+    loading++; 
+}
+
+const text = document.querySelector('.title')
+const btn = document.querySelector('.btn')
+
+// // event name callback function on click
+btn.addEventListener("click", function () {
+    // texte add class "change" css
+    text.classList.toggle('change'); 
+})
+console.log(text.innerHTML)
+
+ // parse string in variable
+const number = document.querySelector("ul");
+const addNumber = document.querySelector(".addNumber");
+const bTn = document.querySelector(".btn");
+
+bTn.addEventListener("click", function () {
+    
+    const newLi = document.createElement('li');
+     // get the value of the input field
+    const liContent = document.createTextNode(addNumber.value);
+    newLi.appendChild(liContent);
+    number.appendChild(newLi)
+});
+
+const numberList = document.querySelectorAll("ul li");
+// click on each list
+for (list of numberList) {
+    list.addEventListener("click", function () {
+        this.style.color= "red"
+    })
+    
+};
+console.log(addNumber.value)
+
+let list = [1,2,3,4];
+for (let i = 0; i < list.length; i++) {
+    console.log(list[i]);
+}
